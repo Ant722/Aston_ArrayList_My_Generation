@@ -4,9 +4,14 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 class ArrayListTest {
+    @Test
+    void testExceptionCapacity() {
+        Assertions.assertThrows(IllegalArgumentException.class, () ->  new ArrayList<>(-3));
+
+    }
 
     @Test
-    void size() {
+    void sizeTest() {
         ListMyGeneration<Integer> list = new ArrayList<>();
         int a = 1;
         int b = 34;
@@ -19,7 +24,7 @@ class ArrayListTest {
     }
 
     @Test
-    void isEmpty() {
+    void isEmptyTest() {
         ListMyGeneration<Integer> list = new ArrayList<>();
         Assertions.assertTrue(list.isEmpty());
         list.add(1);
@@ -28,7 +33,7 @@ class ArrayListTest {
     }
 
     @Test
-    void add() {
+    void addTest() {
         ListMyGeneration<String> list = new ArrayList<>();
         list.add("Кран");
         list.add("Cross");
@@ -49,7 +54,7 @@ class ArrayListTest {
     }
 
     @Test
-    void addByIndex() {
+    void addByIndexTest() {
         ListMyGeneration<String> list = new ArrayList<>();
         list.add("Кран");
         list.add("Cross");
@@ -62,7 +67,7 @@ class ArrayListTest {
     }
 
     @Test
-    void remove() {
+    void removeTest() {
         ListMyGeneration<String> list = new ArrayList<>();
         String str = "Кран";
         list.add(str);
@@ -75,7 +80,7 @@ class ArrayListTest {
     }
 
     @Test
-    void byIndexRemove() {
+    void byIndexRemoveTest() {
         ListMyGeneration<String> list = new ArrayList<>();
         list.add("Кран");
         list.add("Cross");
@@ -89,7 +94,7 @@ class ArrayListTest {
     }
 
     @Test
-    void clear() {
+    void clearTest() {
         ListMyGeneration<String> list = new ArrayList<>();
         list.add("Кран");
         list.add("Cross");
@@ -108,7 +113,7 @@ class ArrayListTest {
     }
 
     @Test
-    void get() {
+    void getTest() {
         ListMyGeneration<String> list = new ArrayList<>();
         list.add("Кран");
         list.add("Cross");
@@ -125,7 +130,7 @@ class ArrayListTest {
     }
 
     @Test
-    void set() {
+    void setTest() {
         ListMyGeneration<String> list = new ArrayList<>();
         list.add("Кран");
         list.add("Cross");
@@ -142,9 +147,9 @@ class ArrayListTest {
     }
 
     @Test
-    void contains() {
+    void containsTest() {
         ListMyGeneration<String> list = new ArrayList<>();
-        ListMyGeneration<String> list3 = new ArrayList<>();
+        ListMyGeneration<String> list3 = new ArrayList<>(12);
         ListMyGeneration<String> list2 = new ArrayList<>();
         list.add("Кран");
         list.add("Cross");
@@ -164,7 +169,7 @@ class ArrayListTest {
     }
 
     @Test
-    void sort() {
+    void sortTest() {
         ListMyGeneration<String> list = new ArrayList<>();
         list.add("Кран");
         list.add("Cross");
