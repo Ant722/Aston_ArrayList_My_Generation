@@ -125,7 +125,7 @@ public class ArrayList<T> implements ListMyGeneration {
     }
 
     private boolean validIndexObject(int index) {
-        return index >= 0 && index < size;
+        return index >= 0 && index <= size;
     }
 
     private void validIndexObjException(int index) {

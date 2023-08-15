@@ -64,6 +64,12 @@ class ArrayListTest {
         String expectedString = "Баран";
         Assertions.assertEquals(expectedString, list.get(2));
         Assertions.assertThrows(IndexOutOfBoundsException.class, () -> list.add(13, "Сорян"));
+        int exceptedInt = 1000;
+        ArrayList<Object> objectArrayList = new ArrayList<>();
+        for (int i = 0; i < 1000; i++) {
+            objectArrayList.add(0, new Object());
+        }
+        Assertions.assertEquals(exceptedInt, objectArrayList.size());
     }
 
     @Test
